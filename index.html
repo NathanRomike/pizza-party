@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pizza Party</title>
+    <title>Party!</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
+    <br>
+    <img class="center logo" src="img/logo.png"/>
+    <br>
     <div class="container">
-      <h1 class="header"><span><img class="logo" src="http://www.clipartbest.com/cliparts/nTB/Rr5/nTBRr5yTA.png"></span> Pizza Party!</h1>
       <div class="jumbotron">
         <div id="intro">
-          <h3>Do you like pizza?</h3>
-          <button id="yes" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-thumbs-up"></span></button>
-          <button id="no" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+          <h3 class="center">Do you like pizza?</h3>
+          <span class="center">
+            <button id="yes" class="btn btn-success btn-lg "><span class="glyphicon glyphicon-thumbs-up"></span></button>
+            <button id="no" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+          </span>
         </div>
         <form id="pizza-maker">
           <div class="select-size">
-            <select id="size-selection">
+            <select id="size-selection" class="center">
               <option selected="true" disabled="true">Select Size</option>
               <option value="small">Small $5</option>
               <option value="medium">Medium $8</option>
@@ -24,7 +28,7 @@
             </select>
           </div>
           <div class="select-toppings">
-            <h4>Select additional toppings: <br><strong class="small">$2 each</strong></h4>
+            <h4 class="center">Select additional toppings: <br><strong class="small">$2 each</strong></h4>
             <ul class="checkbox">
               <li><input type="checkbox" value="Extra Cheese">Extra Cheese</li>
               <li><input type="checkbox" value="Green Peppers">Green Peppers</li>
@@ -46,7 +50,7 @@
         <div class="pizza-fire">
           <p>Your pizza is being made now!</p>
           <h4 id="total"></h4>
-          <button id="new-order" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-repeat"></span> Add Pizza</button>
+          <button id="new-order" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-repeat"></span> Add Another Pizza</button>
           <button id="delivery" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> Checkout</button>
         </div>
       </div>
