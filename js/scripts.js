@@ -20,7 +20,7 @@ $(function() {
   $("form#pizza-maker").submit(function(event) {
     event.preventDefault();
     var size = $(this).find("select#size-selection").val();
-    var toppings = $(this).find("input:radio:checked").get();
+    var toppings = $(this).find("input:checkbox:checked").get();
     var newPizza = new Pizza(toppings, size);
     console.log(toppings);
     $("h4#total").show();
