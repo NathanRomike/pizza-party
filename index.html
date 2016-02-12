@@ -1,12 +1,34 @@
 <!DOCTYPE html>
   <head>
     <title>Pizza Party</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello, pizza party!</h1>
-    <script src="js/jquery-1.12.0.min.js"></script>
+    <div class="container">
+      <h1 class="center">Pizza Party!</h1>
+      <div class="jumbotron">
+        <label for="size-selection">Please select pizza size:</label>
+        <select id="size-selection">
+          <option value="small">small</option>
+          <option value="medium">medium</option>
+          <option value="large">large</option>
+        </select>
+          <ul id="toppings" class="radio">
+            <li><input type="radio" value="Extra Cheese">Extra Cheese</li>
+            <li><input type="radio" value="Green Peppers">Green Peppers</li>
+            <li><input type="radio" value="Mushrooms">Mushrooms</li>
+            <li><input type="radio" value="Onions">Onions</li>
+            <li><input type="radio" value="Sausage">Sausage</li>
+            <li><input type="radio" value="Bacon">Bacon</li>
+            <li><input type="radio" value="Black Olives">Black Olives</li>
+            <li><input type="radio" value="Spinach">Spinach</li>
+            <li><input type="radio" value="Pineapple">Pineapple</li>
+          </ul>
+          <button id="checkout" class="btn btn-success" type="button">Checkout</button>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -16,3 +16,6 @@ Pizza.prototype.getCheckoutBalance = function() {
   }
   return minBalance;
 };
+// $(document) {
+//
+// }
