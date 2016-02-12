@@ -16,20 +16,25 @@ Pizza.prototype.getCheckoutBalance = function() {
   }
   return minBalance;
 };
+
 $(function() {
   $("button#yes").click(function(event) {
     $("div.select-size").show();
     $("div#intro").hide();
   });
+  
   $("button#no").click(function(event) {
     alert("Sorry, this is a pizza party!");
   });
+
   $("select#size-selection").change(function(event) {
     $("div.select-toppings").show();
   });
+
   $("input").click(function(event) {
     $("div.fire-button").show();
   });
+
   $("form#pizza-maker").submit(function(event) {
     event.preventDefault();
     var size = $(this).find("select#size-selection").val();
