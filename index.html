@@ -9,29 +9,46 @@
     <div class="container">
       <h1 class="header"><span><img class="logo" src="http://www.clipartbest.com/cliparts/nTB/Rr5/nTBRr5yTA.png"></span> Pizza Party!</h1>
       <div class="jumbotron">
+        <div id="intro">
+          <h3>Do you like pizza?</h3>
+          <button id="yes" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+          <button id="no" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+        </div>
         <form id="pizza-maker">
-          <h4>Select size:</h4>
-          <select id="size-selection">
-            <option value="small">small</option>
-            <option value="medium">medium</option>
-            <option value="large">large</option>
-          </select>
-          <h4>Select additional toppings:</h4>
-          <ul class="checkbox">
-            <li><input type="checkbox" value="Extra Cheese">Extra Cheese</li>
-            <li><input type="checkbox" value="Green Peppers">Green Peppers</li>
-            <li><input type="checkbox" value="Pepperoni">Pepperoni</li>
-            <li><input type="checkbox" value="Mushrooms">Mushrooms</li>
-            <li><input type="checkbox" value="Onions">Onions</li>
-            <li><input type="checkbox" value="Sausage">Sausage</li>
-            <li><input type="checkbox" value="Bacon">Bacon</li>
-            <li><input type="checkbox" value="Black Olives">Black Olives</li>
-            <li><input type="checkbox" value="Spinach">Spinach</li>
-            <li><input type="checkbox" value="Pineapple">Pineapple</li>
-          </ul>
-          <button id="checkout" class="btn btn-success btn-lg" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+          <div class="select-size">
+            <select id="size-selection">
+              <option selected="true" disabled="true">Select Size</option>
+              <option value="small">Small $5</option>
+              <option value="medium">Medium $8</option>
+              <option value="large">Large $10</option>
+            </select>
+          </div>
+          <div class="select-toppings">
+            <h4>Select additional toppings: <br><strong class="small">$2 each</strong></h4>
+            <ul class="checkbox">
+              <li><input type="checkbox" value="Extra Cheese">Extra Cheese</li>
+              <li><input type="checkbox" value="Green Peppers">Green Peppers</li>
+              <li><input type="checkbox" value="Pepperoni">Pepperoni</li>
+              <li><input type="checkbox" value="Mushrooms">Mushrooms</li>
+              <li><input type="checkbox" value="Onions">Onions</li>
+              <li><input type="checkbox" value="Sausage">Sausage</li>
+              <li><input type="checkbox" value="Bacon">Bacon</li>
+              <li><input type="checkbox" value="Black Olives">Black Olives</li>
+              <li><input type="checkbox" value="Spinach">Spinach</li>
+              <li><input type="checkbox" value="Pineapple">Pineapple</li>
+            </ul>
+          </div>
+          <div class="fire-button">
+            <button id="checkout" class="btn btn-warning btn-lg" type="submit"><span class="glyphicon glyphicon-fire"></span> Bake</button>
+          </div>
         </form>
-        <span><h4 id="total"></h4></span>
+        <br>
+        <div class="pizza-fire">
+          <p>Your pizza is being made now!</p>
+          <h4 id="total"></h4>
+          <button id="new-order" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-repeat"></span> Add Pizza</button>
+          <button id="delivery" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> Checkout</button>
+        </div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
