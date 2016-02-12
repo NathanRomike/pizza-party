@@ -8,24 +8,28 @@
     <div class="container">
       <h1 class="center">Pizza Party!</h1>
       <div class="jumbotron">
-        <label for="size-selection">Please select pizza size:</label>
-        <select id="size-selection">
-          <option value="small">small</option>
-          <option value="medium">medium</option>
-          <option value="large">large</option>
-        </select>
-          <ul id="toppings" class="radio">
-            <li><input type="radio" value="Extra Cheese">Extra Cheese</li>
-            <li><input type="radio" value="Green Peppers">Green Peppers</li>
-            <li><input type="radio" value="Mushrooms">Mushrooms</li>
-            <li><input type="radio" value="Onions">Onions</li>
-            <li><input type="radio" value="Sausage">Sausage</li>
-            <li><input type="radio" value="Bacon">Bacon</li>
-            <li><input type="radio" value="Black Olives">Black Olives</li>
-            <li><input type="radio" value="Spinach">Spinach</li>
-            <li><input type="radio" value="Pineapple">Pineapple</li>
+        <form id="pizza-maker">
+          <label for="size-selection">Please select pizza size:</label>
+          <select id="size-selection">
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+          </select>
+          <ul class="radio">
+            <li><input id="toppings" type="radio" value="Extra Cheese">Extra Cheese</li>
+            <li><input id="toppings" type="radio" value="Green Peppers">Green Peppers</li>
+            <li><input id="toppings" type="radio" value="Pepperoni">Pepperoni</li>
+            <li><input id="toppings" type="radio" value="Mushrooms">Mushrooms</li>
+            <li><input id="toppings" type="radio" value="Onions">Onions</li>
+            <li><input id="toppings" type="radio" value="Sausage">Sausage</li>
+            <li><input id="toppings" type="radio" value="Bacon">Bacon</li>
+            <li><input id="toppings" type="radio" value="Black Olives">Black Olives</li>
+            <li><input id="toppings" type="radio" value="Spinach">Spinach</li>
+            <li><input id="toppings" type="radio" value="Pineapple">Pineapple</li>
           </ul>
-          <button id="checkout" class="btn btn-success" type="button">Checkout</button>
+          <button id="checkout" class="btn btn-success btn-lg" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+        </form>
+        <h4 id="total"></h4>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

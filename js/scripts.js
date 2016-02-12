@@ -1,5 +1,5 @@
 function Pizza(toppings, pizzaSize) {
-  this.toppings = [toppings];
+  this.toppings = toppings;
   this.pizzaSize = pizzaSize;
 }
 
@@ -9,13 +9,21 @@ Pizza.prototype.getCheckoutBalance = function() {
     minBalance += 3;
   }
   if(this.pizzaSize === "large") {
-    minBalance += 2;
+    minBalance += 5;
   }
   for (var i = 0; i < this.toppings.length; i++) {
     minBalance += 2;
   }
   return minBalance;
 };
-// $(document) {
-//
-// }
+$(function() {
+  $("form#pizza-maker").submit(function(event) {
+    event.preventDefault();
+    var size = $(this).find("select#size-selection").val();
+    var toppings = $(this).find("input:radio:checked").get();
+    var newPizza = new Pizza(toppings, size);
+    console.log(toppings);
+    $("h4#total").show();
+    $("h4#total").text("$" + newPizza.getCheckoutBalance());
+  });
+});
