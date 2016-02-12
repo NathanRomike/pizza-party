@@ -6,6 +6,6 @@ describe('Pizza', function() {
   });
 
   it('Gets the final cost of the order', function() {
-    expect(newPizza.getCheckoutBalance).to.equal(10);
+    expect(newPizza.getCheckoutBalance()).to.equal(10);
   });
 });
