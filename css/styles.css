@@ -1,3 +1,7 @@
+body {
+  background-color: #C63D0F;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -6,11 +10,15 @@
 }
 
 .container {
-  width: 300px;
+  width: 19em;
 }
 
 .logo {
-  width: 300px;
+  text-align: center;
+  font-size: 4.5em;
+  color: white;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+
 }
 
 .select-size {
@@ -29,7 +37,15 @@
   display: none;
 }
 
-@media (min-width: 990px) {
+.order {
+  display: none;
+}
+
+.details {
+  display: none;
+}
+
+@media (min-width: 62em) {
   body {
     background: url(https://wallpaperspal.com/wp-content/uploads/Italian-Pizza-Close-Up-Food-Wallpaper.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -39,11 +55,11 @@
   }
 
   .container {
-    width: 500px;
+    width: 40em;
   }
 
   .logo {
-    width: 600px;
+    font-size: 6.5em;
   }
 
 }
