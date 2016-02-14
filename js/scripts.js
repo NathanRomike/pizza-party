@@ -22,9 +22,9 @@ $(function() {
     $("div.select-size").show();
     $("div#intro").hide();
   });
-  
+
   $("button#no").click(function(event) {
-    alert("Sorry, this is a pizza party!");
+    alert("Sorry, this is a pizza party and you're not invited.");
   });
 
   $("select#size-selection").change(function(event) {
@@ -41,6 +41,16 @@ $(function() {
     var toppings = $(this).find("input:checkbox:checked").get();
     var newPizza = new Pizza(toppings, size);
     $("div.pizza-fire").show();
-    $("h4#total").text("Current balance: $" + newPizza.getCheckoutBalance());
+    $("h4#total").text("This pizza is $" + newPizza.getCheckoutBalance());
+
+    $("button#new-order").click(function(event) {
+      $("div.jumbotron").addClass("col-md-8");
+      $("div.order").append("<h4 class='order-details'>" + newPizza.pizzaSize + "<span class='show-details glyphicon glyphicon-triangle-bottom'></span>" + "</h4>" +
+                            "<h4 class='details'>" + "$" + newPizza.getCheckoutBalance() + "</h4>");
+      $("div.order").show();
+      $("span.show-details").click(function(event) {
+        $("h4.details").show();
+      });
+    });
   });
 });
